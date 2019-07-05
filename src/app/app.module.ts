@@ -14,16 +14,17 @@ import { HttpClientModule } from '@angular/common/http';
 //import { ShippingComponent } from './checkout/shipping/shipping.component';
 
 import { CheckoutModule } from './checkout/checkout.module';
-
+import { InventoryModule } from './inventory/inventory.module';
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     CheckoutModule,
+    InventoryModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
+    //  { path: 'products/:productId', component: ProductDetailsComponent },
       //{ path: 'cart', component: CartComponent },
       //{ path: 'shipping', component: ShippingComponent },
     ])
@@ -31,9 +32,9 @@ import { CheckoutModule } from './checkout/checkout.module';
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
+    //ProductListComponent,
+    //ProductAlertsComponent,
+    //ProductDetailsComponent,
     //CartComponent,
     //ShippingComponent
   ],
