@@ -9,20 +9,23 @@ import { ProductListComponent } from './inventory/product-list/product-list.comp
 import { ProductAlertsComponent } from './inventory/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './inventory/product-details/product-details.component';
 import { CartService } from './cart.service';
-import { CartComponent } from './checkout/cart/cart.component';
+//import { CartComponent } from './checkout/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ShippingComponent } from './checkout/shipping/shipping.component';
+//import { ShippingComponent } from './checkout/shipping/shipping.component';
+
+import { CheckoutModule } from './checkout/checkout.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    CheckoutModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-      { path: 'shipping', component: ShippingComponent },
+      //{ path: 'cart', component: CartComponent },
+      //{ path: 'shipping', component: ShippingComponent },
     ])
   ],
   declarations: [
@@ -31,8 +34,8 @@ import { ShippingComponent } from './checkout/shipping/shipping.component';
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent
+    //CartComponent,
+    //ShippingComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]
