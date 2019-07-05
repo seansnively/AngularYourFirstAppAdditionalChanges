@@ -9,9 +9,9 @@ import { ProductListComponent } from './inventory/product-list/product-list.comp
 import { ProductAlertsComponent } from './inventory/product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './inventory/product-details/product-details.component';
 import { CartService } from './cart.service';
-import { CartComponent } from './cart/cart.component';
+import { CartComponent } from './checkout/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ShippingComponent } from './shipping/shipping.component';
+import { ShippingComponent } from './checkout/shipping/shipping.component';
 
 @NgModule({
   imports: [
